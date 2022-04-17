@@ -11,14 +11,15 @@ const schema = buildSchema(`
 
 const root = {
     description: 'Red shoe',
-    print: 42.2
+    price: 42.2
 }
 
 const app = express()
 
 app.use('/graphql', graphqlHTTP({
     schema: schema,
-    rootValue: root
+    rootValue: root,
+    graphiql: true,
 }))
 
 app.listen(3000, () => {
