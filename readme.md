@@ -4,3 +4,20 @@
     {
         "query": "{description}"
     }
+
+## query the graphiql endpoint
+    {
+        orders {
+            subtotal
+            items {
+                product {
+                    id
+                    description
+                    reviews {
+                    rating
+                }
+            }
+            quantity
+            }
+        } 
+    }
