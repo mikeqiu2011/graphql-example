@@ -9,6 +9,9 @@ module.exports = {
         productsByPrice: (_, args) => {
             console.log(args.min);
             return productModel.getProductsByPrice(args.min, args.max)
+        },
+        productById: (_, args) => {
+            return productModel.getProductById(args.id)
         }
     }
 }
