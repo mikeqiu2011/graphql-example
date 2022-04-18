@@ -17,6 +17,9 @@ module.exports = {
     Mutation: {
         addNewProduct: (_, args) => {
             return productModel.addNewProduct(args.id, args.description, args.price)
+        },
+        addProductReview: (_, args) => {
+            return productModel.addProductReview(args.productId, args.rating, args.comment)
         }
     }
 }
