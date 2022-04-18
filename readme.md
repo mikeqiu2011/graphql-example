@@ -42,3 +42,31 @@
         }
     }
 
+## add comment to two different products in one go
+    mutation {
+        addNewProduct(id: "greenshirt", description: "green shirt", price: 60){
+            id
+            reviews {
+            rating
+            }
+        }
+        shoeReview: addProductReview(productId: "redshoe", rating: 4, comment: "suitable for sport!"){
+            id
+            reviews{
+            rating
+            comment
+            }
+        }
+        addProductReview(productId: "greenshirt", rating: 4, comment: "suitable for sport!"){
+            id
+            reviews{
+            rating
+            comment
+            }
+        }
+    }
+
+## Apollo
+    https://studio.apollographql.com/sandbox/explorer
+    
+
