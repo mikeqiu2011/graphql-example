@@ -21,3 +21,8 @@
             }
         } 
     }
+
+## productByPrice
+    productsByPrice(min: 10, max: 50){
+        description
+    }
